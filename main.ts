@@ -102,7 +102,7 @@ if (input.buttonIsPressed(Button.B)) {
         basic.showString("Xt")
         radio.setGroup(1)
         for (let index = 0; index < 2; index++) {
-            radio.sendMessage(RadioMessage.one)
+            radio.sendString("one")
             basic.showLeds(`
                 . . . . .
                 . . . . .
