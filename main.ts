@@ -120,14 +120,24 @@ basic.forever(function () {
                     . . # # #
                     `)
                 basic.pause(100)
+                if (input.buttonIsPressed(Button.AB)) {
+                    Counter = 0
+                    basic.clearScreen()
+                    basic.pause(100)
+                }
             }
-            Counter = 0
         } else if (Counter == 7) {
             radio.setGroup(1)
             basic.showString("Xt2")
+            basic.pause(100)
+            radio.sendNumber(2)
             music.setVolume(127)
             music.play(music.stringPlayable("C5 B E D C E C C ", 120), music.PlaybackMode.UntilDone)
-            Counter = 0
+            if (input.buttonIsPressed(Button.AB)) {
+                Counter = 0
+                basic.clearScreen()
+                basic.pause(100)
+            }
         }
     }
 })
