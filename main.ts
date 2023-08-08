@@ -128,7 +128,7 @@ basic.forever(function () {
             }
         } else if (Counter == 7) {
             radio.setGroup(1)
-            basic.showString("Xt2")
+            basic.showString("X2 ")
             basic.pause(100)
             radio.sendNumber(2)
             music.setVolume(127)
